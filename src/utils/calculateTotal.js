@@ -9,7 +9,7 @@ export const calculateTotal = (tripCost, options) => {
     if (typeof (currentValue) != 'undefined') {
       if (Array.isArray(currentValue) && Array.isArray(option.values)) {
         for (let optionId of currentValue) {
-          const value = option.values.filter(opt => opt.id == optionId)[0];
+          const value = option.values.filter(opt => opt.id === optionId)[0];
           const price = parseOptionPrice(value.price);
           if (price.type === 'multiplier') {
             multiplier += price.value;
