@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './OrderOption.module.scss';
 
 const OrderOptionNumber = ({limits, currentValue, setOptionValue}) => (

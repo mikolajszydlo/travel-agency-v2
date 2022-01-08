@@ -17,6 +17,10 @@
   }
 }
 
+.icons {
+
+}
+
 .icon {
   cursor: pointer;
   width: 80%;
@@ -25,10 +29,10 @@
   i {
     padding-right: ($base-size / 2);
   }
+}
 
-  &Active {
-    background: $color-primary;
-  }
+.active {
+  background: $color-primary;
 }
 
 .checkboxes {
