@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './HappyHourAd.module.scss';
+import {formatTime} from '../../../utils/formatTime.js';
 
 class HappyHourAd extends React.Component {
   constructor(){
     super();
   
-    setInterval(() => this.forceUpdate, 1000);
+    setInterval(() => {this.forceUpdate()}, 1000);
   }
 
   getCountdownTime(){
@@ -23,13 +24,13 @@ class HappyHourAd extends React.Component {
     const {title, promoDescription} = this.props;
     const promoCounter = this.getCountdownTime();
 
-    return(
+    return (
       <div className={styles.component}>
         <h3 className = {styles.title}>
           {title}
         </h3>
         <div className = {styles.promoDescription}>       
-          {(promoCounter > 23 * 60 * 60) ? promoDescription : promoCounter}
+          {(promoCounter > 23 * 60 * 60) ? promoDescription : formatTime(promoCounter)}
         </div>
       </div>
     );
